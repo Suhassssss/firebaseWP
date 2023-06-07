@@ -41,21 +41,23 @@
 <head>
   <title>Web Push Notification App</title>
   <!-- Include the Firebase JavaScript SDK -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-messaging.js"></script>
 </head>
 <body>
   <h1>Web Push Notification App</h1>
 
   <script>
     // Initialize Firebase
-    var firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_AUTH_DOMAIN",
-      projectId: "YOUR_PROJECT_ID",
-      messagingSenderId: "YOUR_SENDER_ID",
-      appId: "YOUR_APP_ID"
-    };
+    const firebaseConfig = {
+    apiKey: "AIzaSyBZFjAZP8Jaid4Ptpj0ePH1DuYm-6TwXbY",
+    authDomain: "webpush-b49d8.firebaseapp.com",
+    projectId: "webpush-b49d8",
+    storageBucket: "webpush-b49d8.appspot.com",
+    messagingSenderId: "31138849707",
+    appId: "1:31138849707:web:2ea55b7d412411d1e6a8ee",
+    measurementId: "G-Z5DMVGQ98Z"
+  };
     firebase.initializeApp(firebaseConfig);
 
     // Retrieve an instance of Firebase Messaging
