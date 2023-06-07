@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,5 +33,48 @@
 
 <h1>Firebase webpush app</h1>
 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Push Notification App</title>
+  <!-- Include the Firebase JavaScript SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-messaging.js"></script>
+</head>
+<body>
+  <h1>Web Push Notification App</h1>
+
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      projectId: "YOUR_PROJECT_ID",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // Retrieve an instance of Firebase Messaging
+    const messaging = firebase.messaging();
+
+    // Request permission to receive notifications
+    messaging.requestPermission().then(() => {
+      console.log('Notification permission granted.');
+      // Get the registration token
+      messaging.getToken().then((token) => {
+        console.log('Registration token:', token);
+        // Send the token to your server for later use
+        // ...
+      }).catch((error) => {
+        console.log('Error retrieving registration token:', error);
+      });
+    }).catch((error) => {
+      console.log('Unable to get permission to notify.', error);
+    });
+  </script>
 </body>
 </html>
