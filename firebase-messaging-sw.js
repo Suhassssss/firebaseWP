@@ -1,6 +1,5 @@
 importScripts('https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/8.6.8/firebase-messaging.js');
-
 firebase.initializeApp({
   apiKey: "AIzaSyBZFjAZP8Jaid4Ptpj0ePH1DuYm-6TwXbY",
   authDomain: "webpush-b49d8.firebaseapp.com",
